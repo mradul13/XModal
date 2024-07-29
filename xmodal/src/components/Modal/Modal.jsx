@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import styles from './Modal.module.css';
 
 export default function Modal({onClose}){
     
@@ -39,8 +38,8 @@ export default function Modal({onClose}){
     }
 
     return (
-        <div className={styles.modal} onClick={handleClose} ref={modalOuterRef}>
-            <div className={styles['modal-content']} onClick={(e)=>{e.stopPropagation()}}>
+        <div className="modal" onClick={handleClose} ref={modalOuterRef}>
+            <div className="modal-content" onClick={(e)=>{e.stopPropagation()}}>
                 <form onSubmit={handleSubmit}>
                     <h2>Fill Details</h2>
                     <div><label htmlFor="username">Username:</label>
@@ -55,7 +54,7 @@ export default function Modal({onClose}){
                     <div><label htmlFor="dob">Date of Birth:</label>
                     <input onChange={handleChange} value={input.dob} type="date" id="dob" required/></div>
 
-                    <button type="submit" className={styles['submit-button']}>Submit</button>
+                    <button type="submit" className="submit-button">Submit</button>
                 </form>
             </div>
         </div>
